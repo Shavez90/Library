@@ -10,8 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "authors")
 public class Author {
     @Id
-    public String id;
-    public String name;
-    public String email;
-    public String password;
+    private String id;
+    private String name;
+    private String email;
+    private String password;
 }

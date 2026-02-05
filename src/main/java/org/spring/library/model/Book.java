@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "books")
 public class Book {
     @Id
-    public String id;
-    public String title;
-    public String authorId;
+    private String id;
+    private String title;
+    private String authorId;
 }
