@@ -21,8 +21,8 @@ public AuthorDTO register(CreatDTO create){
     author.setPassword(create.getPassword());
 
     Author saved = authorRepository.save(author);
-    AuthorDTO authorDTO = new AuthorDTO(saved.getId(), saved.email,saved.getName());
-return authorDTO;
+    AuthorDTO authorDTO = new AuthorDTO(saved.getName(), saved.getId(), saved.getEmail());
+    return authorDTO;
 }
  public AuthorDTO getAuthorBYEmail(String email){
     Author author = authorRepository.findByEmail(email).orElseThrow(
